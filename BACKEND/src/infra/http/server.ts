@@ -6,7 +6,7 @@ const app = fastify()
 
 // http://localhost:3333/hello
 
-app.get('hello', () => {
+app.get('/hello', () => {
   return 'Hello World'
 });
 
