@@ -4,7 +4,7 @@
 ## 🚀 How to run
 
 
-1. Clone o projeto e acesse o seguinte diretório:
+1. Clone o projeto e acesse o seguinte diretório no terminal:
 
 ```bash
 $ git clone https://github.com/LogicGateDynamics/student-hub-api.git
