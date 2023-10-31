@@ -1,21 +1,24 @@
 # 🧠 student-hub-api
 
 
-## 🚀 How to run 🚀
+## 🚀 How to run
 
 
-Clone the project and access its folder.
+1. Clone o projeto e acesse o seguinte diretório:
 
 ```bash
 $ git clone https://github.com/LogicGateDynamics/student-hub-api.git
 $ cd BACKEND
 ```
 
-To start it, follow the steps below:
+2. Instale as dependências do projeto:
+
 ```bash
 # Install dependencies
-$ npm i
+$ npm install
 ```
+
+3. Inicie a applicaço:
 
 ```bash
 # Run app
