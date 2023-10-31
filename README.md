@@ -18,7 +18,7 @@ $ cd BACKEND
 $ npm install
 ```
 
-3. Inicie a applicaço:
+3. Inicie a aplicação:
 
 ```bash
 # Run app
