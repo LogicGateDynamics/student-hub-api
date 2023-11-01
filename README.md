@@ -8,6 +8,7 @@
 
 ```bash
 $ git clone https://github.com/LogicGateDynamics/student-hub-api.git
+$ cd student-hub-api
 $ cd BACKEND
 ```
 
