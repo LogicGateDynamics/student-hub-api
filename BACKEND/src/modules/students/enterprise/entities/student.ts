@@ -12,6 +12,10 @@ interface StudentProps {
   placaDoVeiculo: string
 }
 export class Student extends Entity<StudentProps> {
+  get matricula(): number {
+    return this.props.matricula
+  }
+
   public static create(
     props: Optional<StudentProps, 'placaDoVeiculo'>,
     id?: EntityId,

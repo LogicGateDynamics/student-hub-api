@@ -1,7 +1,7 @@
 import { EntityId } from '@core/entities/entity-id'
 import { Student } from '@modules/students/enterprise/entities/student'
 import { StudentRepository } from '@modules/students/enterprise/repositories/student-repository'
-import { AppError } from 'errors/app-error'
+import { AppError } from '@errors/app-error'
 
 interface CreateStudentUseCaseRequest {
   nome: string
@@ -14,8 +14,10 @@ interface CreateStudentUseCaseRequest {
 interface CreateStudentUseCaseResponse {
   student: Student
 }
+
 export class CreateStudentUseCase {
-  constructor(private studentRepository: StudentRepository) {}
+  constructor(
+    private studentRepository: StudentRepository) {}
 
   public async execute({
     nome,
