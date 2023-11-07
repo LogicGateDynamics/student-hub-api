@@ -23,6 +23,6 @@ $ npm install
 
 ```bash
 # Run app
-  npm run start
+$  npm run start
 ```
 
