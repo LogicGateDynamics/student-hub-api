@@ -9,14 +9,13 @@
 ```bash
 $ git clone https://github.com/LogicGateDynamics/student-hub-api.git
 $ cd student-hub-api
-$ cd BACKEND
 ```
 
 2. Instale as dependências do projeto:
 
 ```bash
 # Install dependencies
-$ npm install
+$ npm i
 ```
 
 3. Inicie a aplicação:

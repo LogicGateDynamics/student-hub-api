@@ -1,5 +1,5 @@
-import { Student } from "@modules/students/enterprise/entities/student";
-import { StudentRepository } from "@modules/students/enterprise/repositories/student-repository";
+import { Student } from '@modules/students/enterprise/entities/student'
+import { StudentRepository } from '@modules/students/enterprise/repositories/student-repository'
 
 export class InMemoryStudentRepository implements StudentRepository {
   public repository: Student[] = []
@@ -13,7 +13,6 @@ export class InMemoryStudentRepository implements StudentRepository {
       (student) => student.matricula === matricula,
     )
     if (studentFound) return studentFound
-    return null  
+    return null
   }
-  
 }

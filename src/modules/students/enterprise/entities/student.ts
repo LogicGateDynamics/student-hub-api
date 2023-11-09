@@ -16,6 +16,26 @@ export class Student extends Entity<StudentProps> {
     return this.props.matricula
   }
 
+  get nome(): string {
+    return this.props.nome
+  }
+
+  get curso(): string {
+    return this.props.curso
+  }
+
+  get email(): string {
+    return this.props.email
+  }
+
+  get senha(): string {
+    return this.props.senha
+  }
+
+  get placaDoVeiculo(): string {
+    return this.props.placaDoVeiculo
+  }
+
   public static create(
     props: Optional<StudentProps, 'placaDoVeiculo'>,
     id?: EntityId,

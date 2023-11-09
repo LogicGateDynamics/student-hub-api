@@ -2,8 +2,9 @@ import { EntityId } from '@core/entities/entity-id'
 import { Student } from '@modules/students/enterprise/entities/student'
 import { StudentRepository } from '@modules/students/enterprise/repositories/student-repository'
 import { AppError } from '@errors/app-error'
+import { inject, injectable } from 'tsyringe'
 
-interface CreateStudentUseCaseRequest {
+export interface CreateStudentUseCaseRequest {
   nome: string
   matricula: number
   curso: string
@@ -14,10 +15,12 @@ interface CreateStudentUseCaseRequest {
 interface CreateStudentUseCaseResponse {
   student: Student
 }
-
+@injectable()
 export class CreateStudentUseCase {
   constructor(
-    private studentRepository: StudentRepository) {}
+    @inject('studentRepository')
+    private studentRepository: StudentRepository,
+  ) {}
 
   public async execute({
     nome,
@@ -29,9 +32,7 @@ export class CreateStudentUseCase {
   }: CreateStudentUseCaseRequest): Promise<CreateStudentUseCaseResponse> {
     const studentAlreadyExists =
       await this.studentRepository.findByMatricula(matricula)
-    if (studentAlreadyExists) {
-      throw new AppError('Student Already exists.')
-    }
+    if (studentAlreadyExists) throw new AppError('Student Already exists.')
     const newStudent = Student.create({
       nome,
       matricula,
