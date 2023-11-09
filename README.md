@@ -22,6 +22,6 @@ $ npm i
 
 ```bash
 # Run app
-  npm run start
+$  npm run start
 ```
 
