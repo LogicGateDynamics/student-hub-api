@@ -14,14 +14,23 @@ $ cd student-hub-api
 2. Instale as dependências do projeto:
 
 ```bash
-# Install dependencies
+# Instale as dependências
 $ npm i
 ```
 
 3. Inicie a aplicação:
 
 ```bash
-# Run app
+# Inicie a aplicação
 $  npm run start
 ```
 
+## 📚 Documentação
+
+![Swagger](./assets/api-docs.image.png)
+
+  ```bash
+# Após iniciar a aplicação acesse a url:
+
+http://localhost:3333/api-docs
+```

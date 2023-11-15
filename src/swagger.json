@@ -1,0 +1,62 @@
+{
+  "openapi": "3.0.0",
+  "info":{
+    "title": "student-hub-api 📚",
+    "description": "This is Student Hub API",
+    "version": "1.0.0",
+    "contact":{
+    "email": "joaomacedx@gmail.com"
+    }
+  },
+  "paths":{
+    "/students":{
+      "post": {
+        "tags": ["Student"],
+        "summary":"Create a Student",
+        "description":"Create a new Stufent",
+        "requestBody":{
+          "content":{
+            "application/json":{
+              "schema":{
+                "$ref": "#/definitions/Student"
+              }
+            }
+          }
+        },
+        "responses":{
+          "201":{
+            "description": "Created"
+          },
+          "500":{
+            "description": "Student Already exists."
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Student":{
+      "type": "object",
+      "properties":{
+        "nome":{
+          "type": "string"
+        },
+        "matricula":{
+          "type": "number"
+        },
+        "curso":{
+          "type": "string"
+        },
+        "email":{
+          "type": "string"
+        }, 
+        "senha":{
+          "type": "string"
+        },
+        "placaDoVeiculo":{
+          "type": "string"
+        }
+      }
+    } 
+  }
+}
